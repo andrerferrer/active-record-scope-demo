@@ -6,7 +6,12 @@ This is a demo to show-case how to implement a `scope` in your model.
 
 ## What needs to be done?
 
-### 1. 
+* [Add booked on to restaurants](https://github.com/andrerferrer/active-record-scope-demo/commit/5685312106ff5a223d1a7519aea37c7c7bc65db2)
+* [add some booking seeds](https://github.com/andrerferrer/active-record-scope-demo/commit/916e075bbf3f2d125f018cd9b6e0839412b2abee)
+* [Make Restaurant has many bookings](https://github.com/andrerferrer/active-record-scope-demo/commit/18fab3a98c6c50df2b4c877fb3af2fd9ad1f7154)
+* [add scope for past and future bookings](https://github.com/andrerferrer/active-record-scope-demo/commit/a9994ca9acbd810a163c334096dafb0a7e636734)
+* [Improve it with a faster query](https://github.com/andrerferrer/active-record-scope-demo/commit/9d2fa607b1bc22ea663990b562b8f1dd97c970eb)
+
 
 ### If you want to check it locally
 ```sh

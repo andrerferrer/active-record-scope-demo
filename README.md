@@ -63,6 +63,27 @@ And we're good to go 🤓
 
 Good Luck and Have Fun
 
+### Bonus: Association Query
+
+Another nice thing is that you can make a query in ActiveRecord with an association. So, this works as fine:
+
+```ruby
+restaurants = Restaurant.where(address: "Gloria")
+bookings_in_gloria = Booking.where(restaurant: restaurants)
+```
+
+Which means that we can make a new scope:
+```ruby
+  scope :belonging_to_restaurants, ->(restaurants) { where(restaurant: restaurants) }
+```
+
+Then, it's the same as:
+```ruby
+restaurants = Restaurant.where(address: "Gloria")
+Booking.belonging_to_restaurants(restaurants)
+```
+
+
 ---
 
 SOURCES:

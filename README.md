@@ -13,6 +13,25 @@ This is a demo to show-case how to implement a `scope` in your model.
 * [Improve it with a faster query](https://github.com/andrerferrer/active-record-scope-demo/commit/9d2fa607b1bc22ea663990b562b8f1dd97c970eb)
 
 
+## How to use it
+
+Now, we can query bookings that were created before or after today with those scopes:
+```ruby
+  scope :past, -> { where('booked_on < ?', Date.today.to_s) } 
+  scope :future, -> { where('booked_on > ?', Date.today.to_s) }
+```
+
+And how do they work? Well, they just make it easier for us.
+
+Instead of doing `Booking.where('booked_on < ?', Date.today.to_s)`, now, we can do `Booking.past` to retrieve all the bookings in the past.
+
+We can also use it with associations.
+
+If we want to find all past bookings for the first restaurant, all that has to be done is `Restaurant.first.bookings.past`. 
+
+Really cool right?
+
+
 ### If you want to check it locally
 ```sh
 repo_name="active-record-scope-demo"

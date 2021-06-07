@@ -10,7 +10,7 @@ This is a demo to show-case how to implement a `scope` in your model.
 
 ### If you want to check it locally
 ```sh
-repo_name="restaurants-boilerplate"
+repo_name="active-record-scope-demo"
 gh_repository="git@github.com:andrerferrer/$repo_name.git"
 git clone $gh_repository demo
 cd demo

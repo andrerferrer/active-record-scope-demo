@@ -23,11 +23,24 @@ Now, we can query bookings that were created before or after today with those sc
 
 And how do they work? Well, they just make it easier for us.
 
-Instead of doing `Booking.where('booked_on < ?', Date.today.to_s)`, now, we can do `Booking.past` to retrieve all the bookings in the past.
+Instead of doing:
+```ruby
+Booking.where('booked_on < ?', Date.today.to_s)
+```
+
+now, we can do:
+```ruby
+Booking.past
+```
+
+to retrieve all the bookings in the past.
 
 We can also use it with associations.
 
-If we want to find all past bookings for the first restaurant, all that has to be done is `Restaurant.first.bookings.past`. 
+If we want to find all past bookings for the first restaurant, all that has to be done is:
+```ruby
+Restaurant.first.bookings.past
+```
 
 Really cool right?
 
